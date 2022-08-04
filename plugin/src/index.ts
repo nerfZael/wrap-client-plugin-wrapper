@@ -19,7 +19,9 @@ export class WrapClientPlugin extends Module<NoConfig> {
     const result = await client.invoke<Uint8Array>({
       uri: args.uri,
       method: args.method,
-      args: args.args,
+      args: args.args
+        ? JSON.parse(args.args)
+        : undefined,
       encodeResult: true
     });
 
