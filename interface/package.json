@@ -1,6 +1,6 @@
 {
-  "name": "templates-wrapper-interface",
-  "description": "Polywrap Interface Example",
+  "name": "wrap-client-interface",
+  "description": "Wrap Client Interface",
   "private": true,
   "version": "0.3.0",
   "scripts": {

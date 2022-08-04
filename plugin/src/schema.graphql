@@ -1,4 +1,4 @@
-#import { Module, InvocationResult } into WrapClient from "wrap://ens/goerli/wrap-client.eth"
+#import { Module, InvocationResult } into WrapClient from "ipfs/QmcsMbT6JUhA2RXvLDR12mbDsYV6L8ihnQ2vYCJzVbuoRT"
 
 type Module implements WrapClient_Module {
 }
