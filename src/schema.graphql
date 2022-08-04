@@ -1,0 +1,11 @@
+type Module {
+  invoke(uri: String!, method: String!, args: Bytes!): InvocationResult!
+  resolveToWrapper(uri: String!): JSON
+  getManifest(uri: String!): JSON
+  getSchema(uri: String!): String
+}
+
+type InvocationResult {
+  data: JSON
+  error: String
+}
