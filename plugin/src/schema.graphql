@@ -1,0 +1,4 @@
+#import { Module, InvocationResult } into WrapClient from "ipfs/QmZMNhJM7qpJmec5vqEaeSp6JHzmQVBW7RqCXpMXJQHxn9"
+
+type Module implements WrapClient_Module {
+}

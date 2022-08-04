@@ -1,12 +1,12 @@
 import {
+  Args_getManifest,
+  Args_getSchema,
   Args_invoke,
+  Args_resolveToWrapper,
   Client,
   manifest,
   Module,
-  InvocationResult,
-  Args_getManifest,
-  Args_getSchema,
-  Args_resolveToWrapper,
+  WrapClient_InvocationResult,
 } from "./wrap";
 
 import { MaybeAsync, PluginFactory } from "@polywrap/core-js";
@@ -14,7 +14,8 @@ import { MaybeAsync, PluginFactory } from "@polywrap/core-js";
 type NoConfig = Record<string, never>;
 
 export class WrapClientPlugin extends Module<NoConfig> {
-  async invoke(args: Args_invoke, client: Client): Promise<InvocationResult> {
+
+  async invoke(args: Args_invoke, client: Client): Promise<WrapClient_InvocationResult> {
     const result = await client.invoke<Uint8Array>({
       uri: args.uri,
       method: args.method,
