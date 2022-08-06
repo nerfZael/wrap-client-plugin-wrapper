@@ -3,6 +3,7 @@ type Module {
   resolveToWrapper(uri: String!): JSON
   getManifest(uri: String!): JSON
   getSchema(uri: String!): String
+  getFile(uri: String!, filePath: String!): Bytes
 }
 
 type InvocationResult {

@@ -1,4 +1,5 @@
 import {
+  Args_getFile,
   Args_getManifest,
   Args_getSchema,
   Args_invoke,
@@ -9,7 +10,7 @@ import {
   WrapClient_InvocationResult,
 } from "./wrap";
 
-import { MaybeAsync, PluginFactory } from "@polywrap/core-js";
+import { PluginFactory } from "@polywrap/core-js";
 
 type NoConfig = Record<string, never>;
 
@@ -55,6 +56,17 @@ export class WrapClientPlugin extends Module<NoConfig> {
     );
 
     return result;
+  }
+
+  async getFile(args: Args_getFile, client: Client): Promise<Uint8Array | null> {
+    const result = await client.getFile(
+      args.uri,
+      {
+        path: args.filePath,
+      }
+    );
+
+    return result as Uint8Array | null;
   }
 }
 
