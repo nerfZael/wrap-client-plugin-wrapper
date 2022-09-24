@@ -33,7 +33,7 @@ export class WrapClientPlugin extends Module<NoConfig> {
   }
 
   async resolveToWrapper(args: Args_resolveToWrapper, client: Client): Promise<string | null> {
-    const result = await client.resolveUri(args.uri);
+    const result = await client.tryResolveUri({ uri: args.uri });
 
     return JSON.stringify(result);
   }
@@ -47,15 +47,6 @@ export class WrapClientPlugin extends Module<NoConfig> {
     return result
       ? JSON.stringify(result)
       : null;
-  }
-
-  async getSchema(args: Args_getSchema, client: Client): Promise<string | null> {
-    const result = await client.getSchema(
-      args.uri,
-      {}
-    );
-
-    return result;
   }
 
   async getFile(args: Args_getFile, client: Client): Promise<Uint8Array | null> {

@@ -2,7 +2,7 @@
   "name": "wrap-client-interface",
   "description": "Wrap Client Interface",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "scripts": {
     "build": "npx polywrap build",
     "test:env:up": "npx polywrap infra up --modules=eth-ens-ipfs",
@@ -11,6 +11,6 @@
     "test": "yarn test:env:up && yarn deploy && yarn test:env:down"
   },
   "devDependencies": {
-    "polywrap": "0.3.0"
+    "polywrap": "0.8.0"
   }
 }
