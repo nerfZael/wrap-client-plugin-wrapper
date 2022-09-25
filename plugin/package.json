@@ -1,7 +1,7 @@
 {
   "name": "@nerfzael/wrap-client-plugin-wrapper",
   "description": "Wrap Client Plugin Wrapper",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "MIT",
   "repository": {
     "type": "git",
