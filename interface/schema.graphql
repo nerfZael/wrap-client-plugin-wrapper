@@ -1,7 +1,7 @@
 type Module {
   invoke(uri: String!, method: String!, args: Bytes): InvocationResult!
-  resolveToWrapper(uri: String!): JSON
-  getManifest(uri: String!): JSON
+  tryResolveUri(uri: String!): String!
+  getManifest(uri: String!): Bytes!
   getFile(uri: String!, filePath: String!): Bytes
 }
 

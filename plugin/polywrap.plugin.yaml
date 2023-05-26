@@ -1,5 +1,0 @@
-format: 0.1.0
-language: plugin/typescript
-name: wrap-client
-module: ./src/index.ts
-schema: ./src/schema.graphql
